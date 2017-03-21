@@ -1,0 +1,19 @@
+package dhcpFrame;
+
+message Mess {
+	required int32  op = 1;
+	required int32 htype = 2 [default = 6];
+	required int32 hlen = 3 [default = 6];
+	optional int32 hops = 4;
+	required int32 xid = 5;
+	optional int32 secs = 6;
+	optional int32 flags = 7;
+	optional string ciaddr = 8;
+	required string yiaddr = 9;
+	optional string siaddr = 10;
+	required string giaddr = 11;
+	required string chaddr = 12;
+	optional string sname = 13 [default = "DHCPserver"];
+	optional string file = 14 [default = "null"];
+	required int32 opc = 15;
+}
